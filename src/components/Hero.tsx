@@ -1,14 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Elements */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
-      
+
       {/* Decorative circles */}
       <div className="absolute top-32 right-[15%] w-3 h-3 rounded-full bg-primary/30 animate-float" />
       <div className="absolute top-48 left-[20%] w-2 h-2 rounded-full bg-secondary/40 animate-float" style={{ animationDelay: "2s" }} />
@@ -33,14 +35,14 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
-            Our advanced AI analyzes mammography scans with exceptional accuracy, 
-            helping healthcare professionals identify tumors at their earliest, 
+            Our advanced AI analyzes mammography scans with exceptional accuracy,
+            helping healthcare professionals identify tumors at their earliest,
             most treatable stages.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
-            <Button variant="hero" className="group">
+            <Button variant="hero" className="group" onClick={() => navigate("/analysis")}>
               Start Analysis
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
