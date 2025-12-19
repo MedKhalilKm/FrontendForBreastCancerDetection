@@ -1,73 +1,104 @@
-# Welcome to your Lovable project
+# Embrace Health Scan - Breast Cancer Detection
 
-## Project info
+A modern, AI-powered web application designed to assist in the early detection of breast cancer. This project leverages machine learning models to provide accurate predictions based on tumor features and medical images.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Features
 
-## How can I edit this code?
+### 1. Manual Analysis
+For medical professionals who have the underlying data, the **Manual Analysis** tool allows entering 30 specific tumor features (such as radius, texture, perimeter/area, smoothness, compactness, etc.) to generate a prediction (Malignant or Benign).
 
-There are several ways of editing your application.
+- **Interactive Form**: Easy-to-use form with validation.
+- **Real-time Feedback**: Instant prediction results after submission.
+- **Visualizations**: (If applicable) Displays key metrics used in the analysis.
 
-**Use Lovable**
+### 2. Image Analysis
+The **Image Analysis** tool simplifies the process by allowing users to upload a tumor image. The system uses advanced image processing (OpenCV, Scikit-image) on the backend to extract features automatically and provide a diagnosis.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Drag & Drop Upload**: Simple interface to upload medical images.
+- **Automatic Extraction**: Extracts features without manual input.
+- **Secure Processing**: Images are processed securely for prediction.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 3. Modern UI/UX
+- **Responsive Design**: Fully responsive interface tailored for desktops, tablets, and mobile devices.
+- **Fast Performance**: Built with **Vite** for lightning-fast loading and interactions.
+- **Accessible Components**: Utilizes **Shadcn UI** for accessible and consistent design components.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Technology Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Frontend
+- **Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/) / [Radix UI](https://www.radix-ui.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **State Management**: [React Query (TanStack Query)](https://tanstack.com/query/latest)
+- **Forms**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
 
-Follow these steps:
+### Backend (Integration)
+*Note: This repository contains the frontend code. The application requires a corresponding backend service to handle predictions.*
+- **Framework**: FastAPI (Python)
+- **ML Libraries**: Scikit-learn, OpenCV, Scikit-image
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏁 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+Follow these instructions to set up the project locally on your machine.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Prerequisites
+- **Node.js**: Ensure you have Node.js (v18 or higher) installed. [Download Node.js](https://nodejs.org/)
+- **npm** or **yarn**: Comes with Node.js.
 
-**Edit a file directly in GitHub**
+### Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Clone the repository**
+   ```bash
+   git clone <YOUR_REPOSITORY_URL>
+   cd embrace-health-scan
+   ```
 
-**Use GitHub Codespaces**
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-## What technologies are used for this project?
+4. **Open the app**
+   Open your browser and navigate to `http://localhost:8080` (or the port shown in your terminal).
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📖 Usage
 
-## How can I deploy this project?
+1. **Home Page**: Navigate to the landing page to see an overview of the tools.
+2. **Start Analysis**: Click on "Start Analysis" to enter tumor metrics manually. Fill in the required fields and submit to see the prediction.
+3. **Upload Image**: Go to the "Image Analysis" section to upload a slide/tumor image. The system will analyze it and return the result.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🤝 Contributing
 
-Yes, you can!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
