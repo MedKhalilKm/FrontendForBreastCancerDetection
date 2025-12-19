@@ -46,8 +46,8 @@ const Hero = () => {
               Start Analysis
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="heroOutline">
-              Learn More
+            <Button variant="heroOutline" onClick={() => navigate("/image-analysis")}>
+              Scan Image
             </Button>
           </div>
 
